@@ -3,12 +3,10 @@ package com.example.contact
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.contact.MyItem
 import com.example.contact.databinding.ActivityMainBinding
 import android.view.View
 import android.widget.Toast
 import com.android.customitemview.MyAdapter
-import com.example.contact.R
 
 
 class MainActivity : AppCompatActivity() {
