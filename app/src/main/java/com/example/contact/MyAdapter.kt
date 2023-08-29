@@ -9,7 +9,7 @@ import com.example.contact.MyTitle
 import com.example.contact.databinding.IsFavoriteBinding
 import com.example.contact.databinding.ItemRecyclerviewBinding
 
-class MyAdapter(val mItems: MutableList<MyItem>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class MyAdapter(val mItems: MutableList<Any>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     companion object {
         const val ITEM = 0
