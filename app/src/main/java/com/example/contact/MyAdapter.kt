@@ -9,15 +9,22 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.contact.MyItem
 import com.example.contact.R
+import com.example.contact.databinding.IsFavoriteBinding
 import com.example.contact.databinding.ItemRecyclerviewBinding
 
 class MyAdapter(val mItems: MutableList<MyItem>) : RecyclerView.Adapter<MyAdapter.Holder>() {
 
+    companion object {
+        const val ITEM = 0
+        const val TITLE = 1
+    }
     interface ItemClick {
         fun onClick(view : View, position : Int)
     }
 
     var itemClick : ItemClick? = null
+
+    override fun
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder { //새로운 뷰홀더 생성
         val binding = ItemRecyclerviewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -45,5 +52,9 @@ class MyAdapter(val mItems: MutableList<MyItem>) : RecyclerView.Adapter<MyAdapte
         val iconImageView = binding.iconItem
         val name = binding.textItem1
         val tel = binding.textItem2
+    }
+
+    inner class Holder_fav(val binding: IsFavoriteBinding) : RecyclerView.ViewHolder(binding.root) {
+        val isFavorite = binding.isFavorite
     }
 }
